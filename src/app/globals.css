@@ -67,6 +67,9 @@
   --shadow-2xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.3);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  --green-500: #22c55e;
+  --amber-500: #f59e0b;
+  --blue-500: #3b82f6;
 }
 
 .dark {
@@ -183,6 +186,9 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+  --color-status-active: var(--green-500);
+  --color-status-pending: var(--amber-500);
+  --color-status-on-hold: var(--blue-500);
 }
 
 @layer base {
@@ -191,5 +197,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mt-10;
   }
 }

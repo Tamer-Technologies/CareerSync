@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-14">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mt-10">
+      <h1>
         <span className="sr-only">{homePageData.titles[0]}</span>
         <span aria-hidden="true" ref={titleRef} />
       </h1>
