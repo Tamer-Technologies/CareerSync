@@ -16,7 +16,7 @@ const JobCardList = () => {
           <JobCard
             jobTitle={item.jobTitle}
             status={item.status}
-            companyName={item.companyName}
+            company={item.company}
             className="group-hover:-translate-y-3 transition ease-in-out duration-500"
           />
         </Link>

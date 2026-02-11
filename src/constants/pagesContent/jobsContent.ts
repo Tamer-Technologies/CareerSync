@@ -28,7 +28,7 @@ export const jobsCardsData: JobCardData[] = [
     id: "job-1",
     jobTitle: "Frontend Developer Required for Local Dev",
     status: "Pending",
-    companyName: {
+    company: {
       type: "Company",
       name: "Areganto Tante",
     },
@@ -37,7 +37,7 @@ export const jobsCardsData: JobCardData[] = [
     id: "job-2",
     jobTitle: "Senior Frontend Engineer (React/Next.js)",
     status: "Active",
-    companyName: {
+    company: {
       type: "Company",
       name: "Nexus Flow Systems",
     },
@@ -46,7 +46,7 @@ export const jobsCardsData: JobCardData[] = [
     id: "job-3",
     jobTitle: "Junior UI Developer",
     status: "Pending",
-    companyName: {
+    company: {
       type: "Agency",
       name: "Pixel Perfect Labs",
     },
@@ -55,7 +55,7 @@ export const jobsCardsData: JobCardData[] = [
     id: "job-4",
     jobTitle: "Design Systems Engineer",
     status: "On Hold",
-    companyName: {
+    company: {
       type: "Corporation",
       name: "Nova Core Solutions",
     },
@@ -67,7 +67,7 @@ export const jobsDetailsData: Job[] = [
     id: "job-1",
     jobTitle: "Frontend Developer Required for Local Dev",
     status: "Pending",
-    companyName: {
+    company: {
       type: "Company",
       name: "Areganto Tante",
     },
@@ -87,7 +87,7 @@ export const jobsDetailsData: Job[] = [
     id: "job-2",
     jobTitle: "Senior Frontend Engineer (React/Next.js)",
     status: "Active",
-    companyName: {
+    company: {
       type: "Company",
       name: "Nexus Flow Systems",
     },
@@ -113,7 +113,7 @@ export const jobsDetailsData: Job[] = [
     id: "job-3",
     jobTitle: "Junior UI Developer",
     status: "Pending",
-    companyName: {
+    company: {
       type: "Agency",
       name: "Pixel Perfect Labs",
     },
@@ -133,7 +133,7 @@ export const jobsDetailsData: Job[] = [
     id: "job-4",
     jobTitle: "Design Systems Engineer",
     status: "On Hold",
-    companyName: {
+    company: {
       type: "Corporation",
       name: "Nova Core Solutions",
     },

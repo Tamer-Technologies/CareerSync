@@ -6,12 +6,12 @@ import type { JobCardData } from "@/types/job.types";
 interface JobCardProps
   extends ComponentProps<typeof Card>, Omit<JobCardData, "id"> {}
 
-const JobCard = ({ jobTitle, status, companyName, ...props }: JobCardProps) => {
+const JobCard = ({ jobTitle, status, company, ...props }: JobCardProps) => {
   return (
     <Card {...props}>
       <JobCardHeader jobTitle={jobTitle} status={status} />
       <CardFooter>
-        {companyName.type}: {companyName.name}
+        {company.type}: {company.name}
       </CardFooter>
     </Card>
   );
