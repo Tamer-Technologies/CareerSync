@@ -1,10 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import JobCard from "./JobCard";
-import { JobCardData } from "@/types/job.types";
-import { jobsCardsData } from "@/constants/pagesContent/jobsContent";
+import { Job } from "@/types/job.types";
 
-const JobCardList = () => {
-  const data: JobCardData[] = jobsCardsData;
+import { useEffect } from "react";
+
+const JobCardList = ({
+  data,
+  updateJobList,
+}: {
+  data: Job[] | undefined;
+  updateJobList: () => void;
+}) => {
+  useEffect(() => {
+    updateJobList();
+  }, [updateJobList]);
+
+  if (data === undefined) return <p>Loading Jobs...</p>;
 
   if (data.length === 0)
     return <p>There are no Jobs being tracked right now.</p>;
