@@ -18,19 +18,33 @@ import { Separator } from "./ui/separator";
 import JobDetailItem from "./JobDetailItem";
 import { formatSalary } from "@/lib/formatters";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export const JobDetailsClient = ({ jobId }: { jobId: string }) => {
   const [data, setData] = useState<Job | null>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
 
-  const editData = () => {
+  const deleteJob = () => {
     const savedJobs = localStorage.getItem("jobs");
     if (savedJobs) {
       const jobs: Job[] = JSON.parse(savedJobs);
-      const updatedJob = jobs.find((item) => String(item.id) === String(jobId));
+      const updatedJobs = jobs.filter((item) => item.id !== jobId);
+      localStorage.setItem("jobs", JSON.stringify(updatedJobs));
+      router.push("/jobs");
+    }
+  };
 
-      if (updatedJob) {
-        setData(updatedJob);
+  const updateData = () => {
+    const savedJobs = localStorage.getItem("jobs");
+    if (savedJobs) {
+      const jobs: Job[] = JSON.parse(savedJobs);
+      const updatedJobs = jobs.find(
+        (item) => String(item.id) === String(jobId),
+      );
+
+      if (updatedJobs) {
+        setData(updatedJobs);
       }
     }
   };
@@ -66,7 +80,7 @@ export const JobDetailsClient = ({ jobId }: { jobId: string }) => {
 
   return (
     <div className="container max-w-170 mx-auto flex flex-col">
-      <div className="flex">
+      <div className="flex gap-5">
         <FormSheet
           className="mb-4"
           title="Job Form"
@@ -76,9 +90,13 @@ export const JobDetailsClient = ({ jobId }: { jobId: string }) => {
           <JobForm
             id={`job-[${data.id}]-form`}
             job={data}
-            onUpdate={editData}
+            onUpdate={updateData}
           />
         </FormSheet>
+
+        <Button className="ml-auto" onClick={deleteJob}>
+          Delete
+        </Button>
       </div>
 
       <Card>

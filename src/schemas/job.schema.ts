@@ -6,7 +6,7 @@ export const formSchema = z
     title: z
       .string()
       .min(5, "job title must be at least 5 characters.")
-      .max(32, "job title must be at most 32 characters."),
+      .max(75, "job title must be at most 32 characters."),
     description: z
       .string()
       .min(20, "description must be at least 20 characters.")
