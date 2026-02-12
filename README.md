@@ -1,4 +1,4 @@
-# Jobs Center
+# CareerSync
 
 A job tracking application built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**.  
 The project focuses on clean architecture, realistic data flow, and scalable frontend patterns rather than feature bloat.
